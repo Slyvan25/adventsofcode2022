@@ -1,0 +1,14 @@
+{
+  "name": "day-1",
+  "version": "1.0.0",
+  "description": "Elves need foodie calculator",
+  "main": "app.js",
+  "scripts": {
+    "test": "hohoho"
+  },
+  "keywords": [
+    "elves"
+  ],
+  "author": "Silvan Paul",
+  "license": "ISC"
+}
