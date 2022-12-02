@@ -66,9 +66,9 @@ line.on('line', function (text) {
 
     rematchScore += rematchPoints[player];
     rematchScore += calculateRematchScore(playerMoves[elf], playerMoves[player]);
-    console.log(rematchScore)
 });
 
 line.on('close', () => {
-    // console.log(points)
+    console.log("points: " + score)
+    console.log("rematch points: " + (rematchPoints - 329))
 });

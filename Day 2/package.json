@@ -1,0 +1,11 @@
+{
+  "name": "day-2",
+  "version": "1.0.0",
+  "description": "Rock paper scissors to stone the right elf",
+  "main": "app.js",
+  "scripts": {
+    "test": "elf"
+  },
+  "author": "Silvan Paul, Slyvan25",
+  "license": "ISC"
+}
