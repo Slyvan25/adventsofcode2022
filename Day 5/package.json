@@ -1,0 +1,19 @@
+{
+  "name": "day-5",
+  "version": "1.0.0",
+  "description": "Crate moving might crush an elf later idk",
+  "main": "app.js",
+  "scripts": {
+    "test": "happyaccidents"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slyvan25/adventsofcode2022.git"
+  },
+  "author": "Silvan Paul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slyvan25/adventsofcode2022/issues"
+  },
+  "homepage": "https://github.com/Slyvan25/adventsofcode2022#readme"
+}
