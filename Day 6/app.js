@@ -8,8 +8,8 @@ const processStream = (length) => (character, i) => {
     if (chunk.size === length) return i + length
 }
 
-const part1 = packetCapture.map(processStream(packetSize)).filter(Boolean)[0];
-const part2 = packetCapture.map(processStream(packetSize + 10)).filter(Boolean)[0];
+const protocolMarker = packetCapture.map(processStream(packetSize)).filter(Boolean)[0];
+const messages = packetCapture.map(processStream(packetSize + 10)).filter(Boolean)[0];
 
 
-console.log(`start-of-packet marker is detected at : ${part1}\r\nlarger start-of-message marker packet detected at: ${part2} `);
+console.log(`start-of-packet protocol marker is detected at : ${protocolMarker}\r\nmessage packet marker detected at: ${messages} `);
