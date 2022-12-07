@@ -1,0 +1,11 @@
+{
+  "name": "day-7",
+  "version": "1.0.0",
+  "description": "find the elves browser history jk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Silvan Paul",
+  "license": "ISC"
+}
