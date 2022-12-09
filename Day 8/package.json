@@ -1,0 +1,37 @@
+{
+  "name": "adventofcode2022",
+  "version": "1.0.0",
+  "description": "Happy little trees",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slyvan25/adventofcode2022.git"
+  },
+  "author": "Silvan Paul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slyvan25/adventofcode2022/issues"
+  },
+  "homepage": "https://github.com/Slyvan25/adventofcode2022#readme",
+  "keywords": [
+    "my",
+    "name",
+    "is",
+    "silvan",
+    "and",
+    "i",
+    "speak",
+    "to",
+    "the",
+    "trees",
+    "but",
+    "weirdly",
+    "enough",
+    "they",
+    "speak",
+    "elvnanees"
+  ]
+}

@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/controls/FlyControls.js"></script>
+    <style>
+      body { margin: 0; }
+      canvas { width: 100%; height: 100% }
+    </style>
+  </head>
+  <body>
+    <script>
+        const treeGrid = [
+'30373',
+'25512',
+'65332',
+'33549',
+'35390',
+];
+      // Create a new 3D scene.
+      const scene = new THREE.Scene();
+
+      // Create a new perspective camera.
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+      // Set the position of the camera.
+      camera.position.z = 10;
+
+      // Create a new renderer.
+      const renderer = new THREE.WebGLRenderer();
+
+      // Set the size of the renderer.
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      // Add the renderer to the page.
+      document.body.appendChild(renderer.domElement);
+
+      // Define the material for the trees.
+      const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+
+      // Create a group to hold the trees.
+      const group = new THREE.Group();
+
+      // Add a tree for each cell in the grid.
+      for (let i = 0; i < treeGrid.length; i++) {
+        const row = treeGrid[i];
+        for (let j = 0; j < row.length; j++) {
+          // Create a new cube geometry for the tree.
+          const geometry = new THREE.BoxGeometry(1, 1, 1);
+
+          // Create a new mesh for the tree.
+          const mesh = new THREE.Mesh(geometry, material);
+
+          // Set the position of the tree in the grid.
+          mesh.position.set(i, j, 0);
+
+          // Add the tree to the group.
+          group.add(mesh);
+        }
+      }
+
+      // Add the group of trees to the scene.
+      scene.add(group);
+
+      // Create fly controls.
+      const controls = new THREE.FlyControls(camera);
+
+      // Define a function to update the camera position and render the scene.
+      function update() {
+        // Update the camera position using the fly controls.
+        controls.update(delta);
+
+        // Render the scene using the camera.
+        renderer.render(scene, camera);
+
+        // Call the update function again on the next frame.
+        requestAnimationFrame(update);
+      }
+
+      // Start the update loop by rendering the scene for the first time.
+      // This will create the domElement property on the renderer object.
+      renderer.render(scene, camera);
+      update();
+    </script>
+  </body>
+</html>
